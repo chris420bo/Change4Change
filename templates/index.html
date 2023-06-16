@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content = "with=device-width, initial-scale=1.0">
+    <title>Change For Change</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="containerH">
+            <div class="left-nav">
+                <a href="/"><img src="../static/images/large_logo.png" class="logo"></a>
+                {% if logged_in %}
+                <a class="header-item" href="/dashboard">Dashboard<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/charity">Charities<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/about">About<div class="hover-boarder"></div></a>
+                {% else %}
+                <a class="header-item" href="/charity">Charities<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/about">About<div class="hover-boarder"></div></a>
+                {% endif %}
+            </div>
+            <div class="right-nav">
+                {% if logged_in %}
+                <a class="header-item" href="/logout">Log Out<div class="hover-boarder"></div></a>
+                {% else %}
+                <a class="header-item" href="/login">Log In<div class="hover-boarder"></div></a>
+                <a class="sign-icon" href="/register">Sign Up</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="section1 s1-padding">
+        <div class="img-div">
+            <img src="../static/images/change.jpeg" class="background-img">
+        </div>
+        <div class="text-box">
+            <h1>Change for Change</h1>
+            <p>"One penny may seem to you a very insignificant thing, but it is the small
+            <br>seed from which fortunes spring" - Orison Swett Marden
+            </p>
+        </div>
+    </div>
+    <!--second section-->
+    <section class="what">
+        <h1>What Are We?</h1>
+        <p>Change for Change is a revolutionary way of supporting your favorite charity.<br>
+        We are an application that rounds up your daily expenses, collects the difference,
+        and <br>then stores it away for future donations. Our automated system ensures continuous<br>
+        donations so you no longer have to worry about not donating enough.
+        </p>
+    </section>
+    <!--third section-->
+
+    <section class="color top">
+        <h1 class="third">How to Get Started?</h1>
+            <ul class="num">
+                <li>1. <a href="/register">Create an account</a></li>
+                <li>2. Connect your bank account to your Change for Change account</li>
+                <li>3. Browse through our carefully curated list of charities and
+                select the ones you'd like to support</li>
+                <li>4. That's it! Sit back and relax while our automated donation system
+                takes care of the rest</li>
+            </ul>
+    </section>
+    <!--empty space-->
+    <section class = "color">
+        <br><br><br><br>
+    </section>
+
+</body>
+</html>
+

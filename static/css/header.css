@@ -1,0 +1,174 @@
+/*General Header Formating*/
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+div{
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    z-index: 998;
+}
+
+.containerH{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid rgba(25,25,25,0.05);
+}
+
+.logo{
+    width: auto;
+    height: 55px;
+    margin-right: 30px;
+}
+
+.left-nav .header-item{
+    margin-left: 0px;
+}
+
+.right-nav{
+    padding-top: 18px;
+    padding-bottom: 17px;
+}
+
+.left-nav, .right-nav{
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+}
+
+.header-item{
+    margin: 0px 35px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 0;
+    color: #191919;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    height: 56px;
+    position: relative;
+    opacity: 1;
+}
+
+.hover-boarder{
+    bottom: -18px;
+    width: calc(100% + 15px);
+    left: -7px;
+    position: absolute;
+    height: 2px;
+    background: #89CFF0;
+    opacity: 0;
+    transition: opacity 400ms cubic-bezier(0.64,0.04,0,1);
+}
+
+.header-item:hover .hover-boarder{
+    opacity: 1;
+}
+
+a{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*For Login and Signup Headers*/
+.headerLS{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 84px;
+    background: #FFFFFF;
+    top: 0px;
+    border-bottom: 2px solid #F9F9F9;
+}
+
+.spacing{
+    width: calc(33.3333%);
+    display: flex;
+    flex: 1 1 0%;
+}
+
+.logo-div{
+    width: calc(33.3333%);
+    display: flex;
+    flex: 1 1 0%;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup{
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: right;
+}
+
+.login{
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: right;
+}
+
+.signup-bttn{
+    margin-right: 20px;
+}
+
+.login-bttn{
+    margin-right: 20px;
+}
+
+.bttn-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: inherit;
+    border: inherit;
+    outline: inherit;
+    min-width: 44px;
+    height: 44px;
+    padding: 0px 24px;
+    border-radius: 100px;
+    transition: all 100ms ease-in-out 0s;
+}
+
+.signup-txt{
+    font-size: 14px;
+    color: #191919;
+    font-weight: 600;
+    margin-left: 0px;
+}
+
+.login-txt{
+    font-size: 14px;
+    color: #191919;
+    font-weight: 600;
+    margin-left: 0px;
+}

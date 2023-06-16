@@ -1,0 +1,204 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgba(137,207,240,0.6);
+}
+
+.container{
+    display: grid;
+    margin-top: 92px;
+}
+
+.content-box{
+    display: grid;
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 15px 5px;
+    background-color: #FFFFFF;
+    padding: 50px 50px 50px;
+    justify-self: center;
+    border-radius: 0 0 10px 10px;
+}
+
+h1 a{
+    color: purple;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.table-lbl{
+    padding-bottom: 30px;
+}
+
+h3{
+    font-size: 0.87rem;
+}
+
+h4{
+    font-size: 0.8rem;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+p{
+    color: #677483;
+}
+
+strong{
+    color: #89CFF0;
+}
+
+b{
+    color: #363949;
+}
+
+.content-box .insights{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+.content-box .insights > div{
+    background: #fff;
+    padding: 1.8rem;
+    border-radius: 10px;
+    margin: 40px;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 15px 5px;
+    text-align: center;
+}
+
+.content-box .insights > div span{
+    background: #89CFF0;
+    padding: 10px;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 40px;
+}
+
+.content-box .insights > div.expenses span{
+    background: #ff7782;
+}
+
+.content-box .insights > div.income span{
+    background: #89f0aa;
+}
+
+.content-box .insights > div .left{
+    text-align: center;
+}
+
+.content-box .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1.5rem;
+}
+
+.content-box .insights .progress{
+    height: auto;
+    border-radius: 50%;
+}
+
+.content-box .insights .progress .number{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-box .recent-orders{
+    margin-top: 2rem;
+}
+
+.content-box .recent-orders h2{
+    margin-bottom: 0.8rem;
+}
+
+.content-box .recent-order table{
+    background: #fff;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1.8rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 15px 5px;
+}
+
+.content-box table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid rgba(132,139,200,0.18);
+    color: #677483;
+}
+
+.content-box table tbody tr:last-child td{
+    border: none;
+}
+
+.shift{
+    margin-left: 20px;
+}
+
+/*No Card Connected*/
+
+.disconnect{
+    margin-top: 50px;
+    width: 800px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 15px 5px;
+    background-color: rgb(255, 255, 255);
+    padding: 50px 50px 50px;
+    justify-self: center;
+}
+
+.item1{
+    font-weight: bold;
+    margin: 0px 0px 30px;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.connect-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    box-shadow: none;
+    padding: 20px 50px;
+    border-radius: 100px;
+    background: #89CFF0;
+    color: #FFFFFF;
+    letter-spacing: normal;
+    font-size: 18px;
+    font-weight: 600;
+}

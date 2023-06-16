@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgba(137,207,240,0.6);
+}
+
+.grid-container{
+    display: grid;
+    padding: 50px 100px;
+    margin-top: 92px;
+    row-gap: 45px;
+}
+
+.content-box{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 15px 5px;
+    padding: 30px 50px;
+}
+
+.name{
+    font-size:18px;
+    font-weight: bold;
+}
+
+.grid-container img{
+    width: 60%;
+    padding-bottom: 25px;
+    display: block;
+    margin: auto;
+}

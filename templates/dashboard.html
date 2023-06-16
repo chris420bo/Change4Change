@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "with=device-width, initial-scale=1.0">
+    <title>C4C - Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/home-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="containerH">
+            <div class="left-nav">
+                <a href="/"><img src="../static/images/large_logo.png" class="logo"></a>
+                <a class="header-item" href="/dashboard">Dashboard<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/wallet">Wallet<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/bank">Bank<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/charity">Charities<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/profile">Profile<div class="hover-boarder"></div></a>
+            </div>
+            <div class="right-nav">
+                <a class="header-item" href="/logout">Log Out<div class="hover-boarder"></div></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% if connected %}
+        <div class="content-box">
+            <div class="Header">
+                <h1>Dashboard</h1>
+                <p>Hey, <strong>{{name}}</strong></p>
+            </div>
+            <div class="insights">
+                <div class="sales">
+                    <span class="material-icons">analytics</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Donations</h3>
+                            <h1>${{total_donations}}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="expenses">
+                    <span class="material-icons">track_changes</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Next Milestone</h3>
+                            <h1>${{next_milestone}}</h1>
+                        </div>
+                        <div class="progress">
+                            <progress class="number" value="{{milestone_progress}}" max="100">
+                            </progress>
+                        </div>
+                    </div>
+                </div>
+                <div class="income">
+                    <span class="material-icons">wallet</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Wallet Balance</h3>
+                            <h1>${{balance}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Table HTML CODE-->
+            <div class="recent-order">
+                <h2 class="table-lbl">Recent Transactions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% if transactions %}
+                        {% for transaction in transactions %}
+                            {% if loop.index <= 10 %}
+                            <tr>
+                                <td>{{transaction[3]}}</td>
+                                <td>${{transaction[4]}}</td>
+                                <td>{{transaction[5]}}</td>
+                            </tr>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% else %}
+        <div class="content-box disconnect">
+            <h1 class="item1">There is no card associated with this account</h1>
+            <div class="button">
+                <a href="/bank">
+                <button class="connect-button" type="submit" name="connect-button">Click here to connect bank account</button>
+                </a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

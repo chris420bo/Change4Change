@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>C4C - Charities</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="containerH">
+            <div class="left-nav">
+                <a href="/"><img src="../static/images/large_logo.png" class="logo"></a>
+                {% if logged_in %}
+                <a class="header-item" href="/dashboard">Dashboard<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/charity">Charities<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/about">About<div class="hover-boarder"></div></a>
+                {% else %}
+                <a class="header-item" href="/charity">Charities<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/about">About<div class="hover-boarder"></div></a>
+                {% endif %}
+            </div>
+            <div class="right-nav">
+                {% if logged_in %}
+                <a class="header-item" href="/logout">Log Out<div class="hover-boarder"></div></a>
+                {% else %}
+                <a class="header-item" href="/login">Log In<div class="hover-boarder"></div></a>
+                <a class="sign-icon" href="/register">Sign Up</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-box what">
+            <h1>What Are We?</h1>
+            <p>Change for Change is a revolutionary way of supporting your favorite charity.
+            We are an application that rounds up your daily expenses, collects the difference,
+            and then stores it away for future donations. Our automated system ensures continuous
+            donations so you no longer have to worry about not donating enough.
+            </p>
+        </div>
+        <div class="content-box beginnings">
+            <h1>Our Beginnings</h1>
+            <p>Change For Change was born from a want to give back more. Our founders discussed how they wanted to repay the surrounding communities they have lived in for the past few years. The only thing standing in their way was time. As students, it was hard to schedule time between classes and exams to go out and help. Thus, Change For Change formed. Change For Change provides the opportunity to give back to the charities that mean the most to us every single day. Whether you can't find time to volunteer or you don't know how to, we provide an easy method to make a difference.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

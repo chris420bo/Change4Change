@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "with=device-width, initial-scale=1.0">
+    <title>C4C - Bank Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/bank.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="containerH">
+            <div class="left-nav">
+                <a href="/"><img src="../static/images/large_logo.png" class="logo"></a>
+                <a class="header-item" href="/dashboard">Dashboard<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/wallet">Wallet<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/bank">Bank<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/charity">Charities<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/profile">Profile<div class="hover-boarder"></div></a>
+            </div>
+            <div class="right-nav">
+                <a class="header-item" href="/logout">Log Out<div class="hover-boarder"></div></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% if connected %}
+        <form action="/disconnect_bank" method="POST">
+            <div class="disconnect">
+                <button class="discon-button button" type="submit" name="discon-button">Disconnect Bank Account</button>
+            </div>
+        </form>
+        {% else %}
+        <form action="/bank" method="post">
+			<div class="content-box">
+				<h1 class="item1">Connect Your Bank!</h1>
+				<div class="iteml details">
+                    <div>
+                        <div class="background contents">
+                            <div class="label">
+                                <label class="digits lbl">Bank Name:</label>
+                            </div>
+                            <div class="in-flex">
+                                <div class="enter">
+                                    <input class="input-bank" type="text" id="bank_name" name="bank_name" placeholder="Enter Bank Name" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="itemr details">
+                    <div>
+                        <div class="background contents">
+                            <div class="label">
+                                <label class="digits lbl">Account Name:</label>
+                            </div>
+                            <div class="in-flex">
+                                <div class="enter">
+                                    <input class="input-bank" type="text" id="username" name="username" placeholder="Enter Account Name" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+                <div class="iteml details">
+                    <div>
+                        <div class="background contents">
+                            <div class="label">
+                                <label class="digits lbl">Account Password:</label>
+                            </div>
+                            <div class="in-flex">
+                                <div class="enter">
+                                    <input class="input-bank" type="password" id="password" name="password" placeholder="Enter Account Password" required>
+                                    <img src="../static/images/eye-close.png" id="eyeicon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemr details">
+                    <div>
+                        <div class="background contents">
+                            <div class="label">
+                                <label class="digits lbl">Last Four Account Digits:</label>
+                            </div>
+                            <div class="in-flex">
+                                <div class="enter">
+                                    <input class="input-bank" type="text" id="last_4" name="last_4" placeholder="Enter Last Four Account Digits" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="connect-button box" type="submit" name="connect-button" disabled="disabled">Connect</button>
+                </div>
+            </div>
+        </form>
+        {% endif %}
+        {% if msg %}
+        <div class="message">
+            <label class="message-txt">{{ msg }}</label>
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="../static/js/passwordSecurity.js"></script>
+    <script src="../static/js/input-check.js"></script>
+
+</body>
+</html>

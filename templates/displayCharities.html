@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>C4C - Charities</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/displayCharity.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="containerH">
+            <div class="left-nav">
+                <a href="/"><img src="../static/images/large_logo.png" class="logo"></a>
+                {% if logged_in %}
+                <a class="header-item" href="/dashboard">Dashboard<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/wallet">Wallet<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/bank">Bank<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/charity">Charities<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/profile">Profile<div class="hover-boarder"></div></a>
+                {% else %}
+                <a class="header-item" href="/charity">Charities<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/about">About<div class="hover-boarder"></div></a>
+                {% endif %}
+            </div>
+            <div class="right-nav">
+                {% if logged_in %}
+                <a class="header-item" href="/logout">Log Out<div class="hover-boarder"></div></a>
+                {% else %}
+                <a class="header-item" href="/login">Log In<div class="hover-boarder"></div></a>
+                <a class="sign-icon" href="/register">Sign Up</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="content-box">
+            <img src="../static/images/{{ org_name[0] }}.png">
+            <div class="content">
+                <div class="name">{{ org_name[0] }}</div>
+                <p>{{ description[0] }}</p>
+            </div>
+        </div>
+        <div class="content-box">
+            <img src="../static/images/{{ org_name[1] }}.png">
+            <div class="content">
+                <div class="name">{{ org_name[1] }}</div>
+                <p>{{ description[1] }}</p>
+            </div>
+        </div>
+        <div class="content-box">
+            <img src="../static/images/{{ org_name[2] }}.png">
+            <div class="content">
+                <div class="name">{{ org_name[2] }}</div>
+                <p>{{ description[2] }}</p>
+            </div>
+        </div>
+        <div class="content-box">
+            <img src="../static/images/{{ org_name[3] }}.png">
+            <div class="content">
+                <div class="name">{{ org_name[3] }}</div>
+                <p>{{ description[3] }}</p>
+            </div>
+        </div>
+        <div class="content-box">
+            <img src="../static/images/{{ org_name[4] }}.png">
+            <div class="content">
+                <div class="name">{{ org_name[4] }}</div>
+                <p>{{ description[4] }}</p>
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="name">Don't see a certain charity?</div>
+            <p>Check back often, as we add more partners!</p>
+        </div>
+    </div>
+
+
+</body>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content = "with=device-width, initial-scale=1.0">
+    <title>C4C - Login</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/li-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	{% if error %}
+		{{ error }}
+	{% endif %}
+    <!-- the above syntax is called Jinja. This checks to see if error is not null and displays the message
+	 if it is. error is set if login fails-->
+
+    <div class="headerLS">
+        <div class="spacing"></div>
+        <div class="logo-div">
+            <a href="/"><img src="../static/images/large_logo.png" width="100px" height=auto class="logo"></a>
+        </div>
+        <div class="signup">
+            <a href="/register"><button class="signup-bttn bttn-box"><div class="signup-txt">Sign Up</div></button></a>
+        </div>
+    </div>
+
+    <div class="container">
+		<form action="/login_action" method="post">
+			<div class="loginBox">
+				<h1 class="item1">Log In</h1>
+				<div class="item2 details">
+                    <div>
+                        <div class="background contents1">
+                            <div class="lable">
+                                <label class="username">Username</label>
+                            </div>
+                            <div class="in-flex">
+                                <div class="enter">
+                                    <input class="input-user" type="text" id="username" name="username" placeholder="Enter Username" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+                <div class="item3 details">
+                    <div>
+                        <div class="background contents2">
+                            <div class="lable">
+                                <label class="password">Password</label>
+                            </div>
+                            <div class="in-flex">
+                                <div class="enter">
+                                    <input class="input-user" type="password" id="password" name="password" placeholder="Enter Password" required>
+                                    <img src="../static/images/eye-close.png" id="eyeicon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="login-button box" type="submit" name="login-button" disabled="disabled">Log In</button>
+                </div>
+            </div>
+		</form>
+	</div>
+    <script src="static/js/input-check.js"></script>
+    <script src="static/js/passwordSecurity.js"></script>
+</body>
+</html>

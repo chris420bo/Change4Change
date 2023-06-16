@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" charset="UTF-8" content = "width=device-width, initial-scale=1.0">
+    <title>C4C - Registration</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/header.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/registration.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="headerLS reg-header">
+    	<div class="spacing"></div>
+        <div class="logo-div">
+            <a href="/"><img src="../static/images/large_logo.png" width="100px" height=auto class="logo"></a>
+        </div>
+        <div class="login">
+            <a href="/login"><button class="login-bttn bttn-box"><div class="login-txt">Log In</div></button></a>
+        </div>
+    </div>
+	<form action="/register" method="post">
+		<div class="grid-container">
+			<div class="requirements-box" id="user-valid" style="visibility: hidden;">
+				<p class="req"> Username must contain the following:</p>
+				<p id="unLen" class="invalid"> At<b> most 8</b> characters</p>
+				<p id="letter" class="invalid">	<b>Lowercase</b> or <b>uppercase</b> letter</p>
+				<p id="unNum" class="invalid">	A <b>number</b></p>
+			</div>
+			<div class="content-box">
+				<h1 class="item1">Start making a change with change!</h1>
+				<div class="iteml details">
+					<div>
+						<div class="background contents userM">
+							<div class="label">
+								<label class="username lbl">Username (8 characters max):</label>
+							</div>
+							<div class="in-flex">
+								<div class="enter">
+									<input class="input-user" type="text" id="username" name="username" placeholder="Enter your username" required>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="itemr details">
+					<div>
+						<div class="background contents userM">
+							<div class="label">
+								<label class="password lbl">Password (8-15 characters):</label>
+							</div>
+							<div class="in-flex">
+								<div class="enter">
+									<input class="input-user" type="password" id="password" name="password" placeholder="Enter your password" required>
+									<img src="../static/images/eye-close.png" id="eyeicon">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="iteml details">
+					<div>
+						<div class="background contents userM">
+							<div class="label">
+								<label class="first-name lbl">First Name:</label>
+							</div>
+							<div class="in-flex">
+								<div class="enter">
+									<input class="input-user" type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="itemr details">
+					<div>
+						<div class="background contents userM">
+							<div class="label">
+								<label class="last-name lbl">Last Name:</label>
+							</div>
+							<div class="in-flex">
+								<div class="enter">
+									<input class="input-user" type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="itemDob details">
+					<div>
+						<div class="background contents">
+							<div class="label">
+								<label class="dob lbl">DOB:</label>
+							</div>
+							<div class="in-flex">
+								<div class="enter">
+									<input class="input-user" type="date" id="birthday" name="birthday" required>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="itemAddr details">
+					<div>
+						<div class="background long-contents">
+							<div class="label">
+								<label class="address lbl">Street Address:</label>
+							</div>
+							<div class="in-flex">
+								<div class="enter">
+									<input class="input-user" type="text" id="street_address" name="street_address" placeholder="Enter your address" required>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="itemC details">
+					<div>
+						<div class="background contents userM">
+							<div class="label">
+								<label class="city lbl">City:</label>
+							</div>
+							<div class="in-flex">
+								<div class="enter">
+									<input class="input-user" type="text" id="city" name="city" placeholder="Enter your city" required>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="itemS details">
+					<div>
+						<div class="background contents userM">
+							<div class="labelS">
+								<label class="state lbl">State:</label>
+							</div>
+							<div class="in-flex">
+								<div class="enter">
+									<select class="input-user" name="state" id="state" required>
+										<option>Choose your state</option>
+										<option value="AL">Alabama</option>
+										<option value="AK">Alaska</option>
+										<option value="AZ">Arizona</option>
+										<option value="AR">Arkansas</option>
+										<option value="CA">California</option>
+										<option value="CO">Colorado</option>
+										<option value="CT">Connecticut</option>
+										<option value="DE">Delaware</option>
+										<option value="FL">Florida</option>
+										<option value="GA">Georgia</option>
+										<option value="HI">Hawaii</option>
+										<option value="ID">Idaho</option>
+										<option value="IL">Illinois</option>
+										<option value="IN">Indiana</option>
+										<option value="IA">Iowa</option>
+										<option value="KS">Kansas</option>
+										<option value="KY">Kentucky</option>
+										<option value="LA">Louisiana</option>
+										<option value="ME">Maine</option>
+										<option value="MD">Maryland</option>
+										<option value="MA">Massachusetts</option>
+										<option value="MI">Michigan</option>
+										<option value="MN">Minnesota</option>
+										<option value="MS">Mississippi</option>
+										<option	value="MO">Missouri</option>
+										<option value="MT">Montana</option>
+										<option value="NE">Nebraska</option>
+										<option value="NV">Nevada</option>
+										<option value="NH">New Hampshire</option>
+										<option value="NJ">New Jersey</option>
+										<option value="NM">New Mexico</option>
+										<option value="NY">New York</option>
+										<option value="NC">North Carolina</option>
+										<option value="ND">North Dakota</option>
+										<option value="OH">Ohio</option>
+										<option value="OK">Oklahoma</option>
+										<option value="OR">Oregon</option>
+										<option value="PA">Pennsylvania</option>
+										<option value="RI">Rhode Island</option>
+										<option value="SC">South Carolina</option>
+										<option value="SD">South Dakota</option>
+										<option value="TN">Tennessee</option>
+										<option value="TX">Texas</option>
+										<option value="UT">Utah</option>
+										<option value="VT">Vermont</option>
+										<option value="VA">Virginia</option>
+										<option value="WA">Washington</option>
+										<option value="WV">West Virginia</option>
+										<option value="WI">Wisconsin</option>
+										<option value="WY">Wyoming</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="itemZ details">
+					<div>
+						<div class="background contents userM">
+							<div class="label">
+								<label class="zip lbl">Zip Code:</label>
+							</div>
+							<div class="in-flex">
+								<div class="enter">
+									<input class="input-user" type="text" id="zipcode" name="zipcode" maxlength="5" pattern="[0-9]{5}" placeholder="Enter your zip code" required>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="itemcent details">
+					<div>
+						<div class="background long-contents">
+							<div class="label">
+								<label class="email lbl">Email:</label>
+							</div>
+							<div class="in-flex">
+								<div class="enter">
+									<input class="input-user" type="text" id="email" name="email" placeholder="Enter your email address" required>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="button">
+	                <button class="join-button box" type="submit" name="join-button" disabled="disabled">Join Now</button>
+	            </div>
+			</div>
+			<div class="requirements-box" id="pw-valid" style="visibility: hidden;">
+				<p class="req"> Password must contain the following:</p>
+				<p id="length" class="invalid">	Must be <b>8-15</b> characters</p>
+				<p id="lower" class="invalid">	A <b>lowercase</b> letter</p>
+				<p id="upper" class="invalid">	An <b>uppercase</b> letter</p>
+				<p id="number" class="invalid">	A <b>number</b></p>
+				<p id="specialChar" class="invalid"> A <b>special character</b></p>
+			</div>
+		</div>
+	</form>
+
+	<script src="../static/js/passwordSecurity.js"></script>
+	<script src="../static/js/input-check.js"></script>
+	<script src="../static/js/usernameValidator.js"></script>
+	<script src="../static/js/pwValidator.js"></script>
+
+	{% if msg %}
+	{{ msg }}
+	{% endif %}
+	<!-- the above syntax is called Jinja. This checks to see if error is not null and displays the message
+	 if it is. error is set if login fails-->
+
+</body>
+</html>

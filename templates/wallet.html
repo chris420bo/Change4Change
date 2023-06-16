@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "with=device-width, initial-scale=1.0">
+    <title>C4C - Wallet</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/wallet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="containerH">
+            <div class="left-nav">
+                <a href="/"><img src="../static/images/large_logo.png" class="logo"></a>
+                <a class="header-item" href="/dashboard">Dashboard<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/wallet">Wallet<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/bank">Bank<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/charity">Charities<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/profile">Profile<div class="hover-boarder"></div></a>
+            </div>
+            <div class="right-nav">
+                <a class="header-item" href="/logout">Log Out<div class="hover-boarder"></div></a>
+            </div>
+        </div>
+    </div>
+    <div class="content-box">
+        <div class="arrow-container">
+        <button class="arrow-btn" aria-expanded="false">
+            <span class="arrow-icon">▼</span>
+            <span class="arrow-msg">Click to Reveal or Hide Charity Information</span>
+        </button>
+        </div>
+        <div id="content" style="display: none;">
+            <h4 id="trigger">Automated Donation Trigger: <span>$50</span></h4>
+          {% if not charity_connected %}
+            <h4>Donations Will Go To The First Charity In Our Campaign By Default</h4>
+            <h4>Haven't Chosen Your Charities?</h4>
+            <div class="button">
+                <a href="/select_charities" class="select-button box">Charity Select</a>
+            </div>
+          {% else %}
+            <h5>Current Charities: <span>{{selected_charities}}</span></h5>
+            <h4>Want to Change Your Charities?</h4>
+            <div class="button">
+                <a href="/select_charities" class="select-button box">Charity Select</a>
+            </div>
+          {% endif %}
+        </div>
+        <div class="container">
+            <div class="insights">
+                <div class="income">
+                    <span class="material-icons">wallet</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Wallet Balance</h3>
+                            <h1>${{balance}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-container1">
+                <form action="/wallet_deposit" method="POST">
+                    <label for="deposit-amount">Deposit:</label>
+                    <input type="number" id="deposit-amount" name="deposit-amount" placeholder="Enter Amount" step="0.01" required>
+                    <button type="submit" class="deposit-button">Deposit</button>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <form action="/wallet_withdraw" method="POST">
+                    <label for="withdraw-amount">Withdraw:</label>
+                    <input type="number" id="withdraw-amount" name="withdraw-amount" placeholder="Enter Amount" step="0.01" required>
+                    <button type="submit" class="withdrawal-button">Withdraw</button>
+                </form>
+            </div>
+
+
+            <h2>Wallet History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% if wallet_transactions %}
+                    {% for transaction in wallet_transactions %}
+                    <tr>
+                        <td>{{ transaction[0] }}</td>
+                        <td>{{ transaction[1] }}</td>
+                        <td>{{ transaction[-1] }}</td>
+                    </tr>
+                    {% endfor %}
+                {% endif %}
+                </tbody>
+            </table>
+
+            <h2>Recent Donations</h2>
+            <table>
+                <thead>
+                    <tr>
+                      <th>Charity</th>
+                      <th>Amount</th>
+                      <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% if donations %}
+                {% for donation in donations %}
+                    {% if loop.index <= 10 %}
+                    <tr>
+                        <td>{{donation[0]}}</td>
+                        <td>${{donation[1]}}</td>
+                        <td>{{donation[2]}}</td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {% if msg %}
+	    {{ msg }}
+    {% endif %}
+
+    <script src="../static/js/arrow.js"></script>
+
+</body>
+</html>

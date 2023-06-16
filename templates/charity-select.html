@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>C4C - Charity Selector</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/header.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/charity-select.css">
+
+</head>
+<body>
+	<div class="header">
+        <div class="containerH">
+            <div class="left-nav">
+                <a href="/"><img src="../static/images/large_logo.png" class="logo"></a>
+                <a class="header-item" href="/dashboard">Dashboard<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/wallet">Wallet<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/bank">Bank<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/charity">Charities<div class="hover-boarder"></div></a>
+                <a class="header-item" href="/profile">Profile<div class="hover-boarder"></div></a>
+            </div>
+            <div class="right-nav">
+                <a class="header-item" href="/logout">Log Out<div class="hover-boarder"></div></a>
+            </div>
+        </div>
+    </div>
+	<div class="container">
+		<form action="/chosen_charities" method="POST">
+			<div class="content-box">
+				<h1 class="item1">Select Your Charities</h1>
+				<div class="checkbox-box">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="charity[]" value="meals"> Meals On Wheels
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="charity[]" value="red"> American Red Cross
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="charity[]" value="heart"> American Heart Association
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="charity[]" value="nyc"> NYC Department of Homeless Services
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="charity[]" value="ny"> NY Blood Center
+						</label>
+					</div>
+				</div>
+				<div class="button">
+                	<button class="box submit-button" type="submit">Start Donating</button>
+	        	</div>
+			</div>
+		</form>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

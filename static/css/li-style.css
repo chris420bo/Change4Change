@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    padding-top: 140px;
+}
+
+form{
+    margin-top: 0em;
+    margin-block-end: 1em;
+}
+
+.item1{
+    font-weight: bold;
+    margin: 0px 0px 30px;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+}
+
+.item2{
+    width: 100%;
+}
+
+.item2 > div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contents1{
+    display: block;
+    max-width: 340px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.background{
+    background-color: #F9F9F9;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #F9F9F9;
+}
+
+.lable{
+    display: flex;
+    align-items: center;
+}
+
+.username{
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #191919;
+    margin-bottom: 2px;
+}
+
+.in-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+
+.enter{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.input-user{
+    position: relative;
+    box-sizing: border-box;
+    width: 320px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #191919;
+    background-color: transparent;
+    border: none;
+    padding: 0px !important;
+}
+
+.input-user:focus, .input-user:hover{
+    outline: 0px;
+    border-color: #666666;
+}
+
+.item3{
+    width 100%;
+}
+
+.contents2{
+    display: block;
+    max-width: 340px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#eyeicon{
+    height: auto;
+    width: 24px;
+    cursor: pointer;
+}
+
+.password{
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #191919;
+    margin-bottom: 2px;
+}
+
+.button{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-button:disabled{
+    background: #CCCFCF;
+    border-color: transparent;
+    color: white;
+    cursor: default;
+    pointer-events: none;
+}
+
+.login-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    box-shadow: none;
+    min-width: 44px;
+    height: 44px;
+    padding: 0px 24px;
+    border-radius: 100px;
+    background: #89CFF0;
+    color: #FFFFFF;
+    letter-spacing: normal;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+
+.box{
+    margin: auto auto 20px;
+    max-width: 340px;
+    width: 100%;
+}
