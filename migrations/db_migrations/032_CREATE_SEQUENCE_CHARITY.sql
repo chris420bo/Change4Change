@@ -1,0 +1,1 @@
+CREATE SEQUENCE charity_user_id_seq AS integer START 6 OWNED BY Charity.user_id;

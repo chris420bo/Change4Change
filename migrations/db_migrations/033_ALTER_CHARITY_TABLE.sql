@@ -1,0 +1,1 @@
+ALTER TABLE Charity ALTER COLUMN user_id SET DEFAULT nextval('charity_user_id_seq');

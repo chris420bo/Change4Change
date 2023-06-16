@@ -1,0 +1,2 @@
+ALTER TABLE Donation
+ADD created_on date DEFAULT CURRENT_DATE

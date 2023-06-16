@@ -1,0 +1,3 @@
+UPDATE public.charity
+SET description='As part of the NYC Department of Social Services, DHS and its partners continue to strengthen our work in the areas of homelessness prevention; street and subway outreach; sheltering individuals and families; and moving clients to housing permanency and supporting their transitions with aftercare services. We do this in furtherance of our system wide collective efforts to reduce homelessness and to improve the lives of all the clients who we serve.'
+WHERE name='NYC Department of Homeless Services';

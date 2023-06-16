@@ -1,0 +1,1 @@
+DELETE FROM Favorite_Charities WHERE name='Red Cross';

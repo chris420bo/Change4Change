@@ -1,0 +1,1 @@
+CREATE SEQUENCE wallet_id_seq AS integer START 6 OWNED BY Wallet.wallet_id;

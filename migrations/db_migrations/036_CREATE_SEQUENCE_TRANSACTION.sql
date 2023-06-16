@@ -1,0 +1,1 @@
+CREATE SEQUENCE transaction_id_seq AS integer START 26 OWNED BY Transactions.transaction_id;

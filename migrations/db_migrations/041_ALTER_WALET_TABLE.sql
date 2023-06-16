@@ -1,0 +1,1 @@
+ALTER TABLE Wallet ALTER COLUMN wallet_id SET DEFAULT nextval('wallet_id_seq');

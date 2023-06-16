@@ -1,0 +1,1 @@
+ALTER TABLE Users ALTER COLUMN user_id SET DEFAULT nextval('user_id_seq');

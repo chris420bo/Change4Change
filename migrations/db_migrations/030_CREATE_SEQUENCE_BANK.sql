@@ -1,0 +1,1 @@
+CREATE SEQUENCE bank_account_id_seq AS integer START 6 OWNED BY Bank.account_id;

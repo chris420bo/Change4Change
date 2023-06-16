@@ -1,0 +1,1 @@
+CREATE SEQUENCE user_id_seq AS integer START 7 OWNED BY Users.user_id;

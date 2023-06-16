@@ -1,0 +1,2 @@
+ALTER TABLE Users
+ADD created_on date DEFAULT CURRENT_DATE

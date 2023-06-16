@@ -1,0 +1,1 @@
+ALTER TABLE Donation ALTER COLUMN donation_id SET DEFAULT nextval('donation_id_seq');

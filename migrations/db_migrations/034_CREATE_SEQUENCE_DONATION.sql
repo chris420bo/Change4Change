@@ -1,0 +1,1 @@
+CREATE SEQUENCE donation_id_seq AS integer START 9 OWNED BY Donation.donation_id;

@@ -1,0 +1,1 @@
+UPDATE public.users SET email= 'test@gmail.com' WHERE email IS NULL
